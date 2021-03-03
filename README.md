@@ -8,10 +8,10 @@ This project is a booking system for the NSC (National Sport Centre) on the Isle
 
 1. GitHub create a repo
 2. Using PowerShell, locate the folder that you want the project to be saved to
-   1. cd ...
+   1. cd <*paste location here*>
 3. Clone the repository
    1. Copy the link from GitHub and paste it into PowerShell
-   2. git clone <paste>
+   2. git clone <*paste*>
 
 
 
@@ -23,8 +23,8 @@ This project is a booking system for the NSC (National Sport Centre) on the Isle
 4. Create new database
    1. SQL Server > localdb\MSS... > Databases
    2. Right click databases folder and select add database
-   3. Name
-5. In the new SQL Query start with USE <database name>;
+   3. Name - here NSC
+5. In the new SQL Query start with USE <*database name*>;
 6. Create tables and run then add drop tables at the start
 7. Add the appropriate data once created and run without problems
 
@@ -58,7 +58,7 @@ This project is a booking system for the NSC (National Sport Centre) on the Isle
 2. Click NSC Database
 3. Properties box - copy whole connection string
 4. NSC_Model page - Package manager console
-   1. Scaffold-DbContext '<connection string>' Microsoft.EntityFrameworkCore.SqlServer
+   1. Scaffold-DbContext '<*connection string*>' Microsoft.EntityFrameworkCore.SqlServer
 
 
 
