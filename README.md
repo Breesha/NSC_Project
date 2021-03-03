@@ -97,3 +97,6 @@ This project is a booking system for the NSC (National Sport Centre) on the Isle
 8. Add `CRUDMembers _crudMembers = new CRUDMembers();` underneath class name
 9. Create a `[Teardown]`
 10. Add another class within the UnitTest1 for the Booking Tests and follow the same steps
+11. To view and run tests
+    1. View > Test Explorer > Run tests
+    2. Tests need to have `[Test]` at the start to be acknowledged
