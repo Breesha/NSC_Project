@@ -73,3 +73,27 @@ This project is a booking system for the NSC (National Sport Centre) on the Isle
    1. Create CRUDManager but can add more if needed
 7. CRUD - public class CRUDM
 
+
+
+## Step 7 - Test Layer
+
+1. Solution RClick > Add > New project
+2. Select NUnit Project .NET Core
+3. Packages - should already be there
+   1. NUnit
+   2. NUnit3TestAdapter
+   3. Microsoft.NET.Test.Sdk
+4. Dependencies
+   1. Model
+   2. Business
+5. Already has class called UnitTest1
+6. Using ... ;
+   1. NSC_Model
+   2. NSC_Business
+   3. NUnit.Framework
+   4. System.Linq
+   5. System
+7. Change class name but leave namespace
+8. Add `CRUDMembers _crudMembers = new CRUDMembers();` underneath class name
+9. Create a `[Teardown]`
+10. Add another class within the UnitTest1 for the Booking Tests and follow the same steps
