@@ -45,10 +45,18 @@ namespace NSC_Business
         {
             using (var db = new NSCContext())
             {
+                var selectedMemberBookings = 
+                    from b in db.Bookings
+                    join m in db.Members on b.MemberId equals m.MemberId
+                    where m.Username == username && m.Passwrd == password
+                    select b;
+                db.Bookings.RemoveRange(selectedMemberBookings);
+                db.SaveChanges();
+
                 var selectedMember =
-                from m in db.Members
-                where m.Username == username && m.Passwrd == password
-                select m;
+                    from m in db.Members
+                    where m.Username == username && m.Passwrd == password
+                    select m;
                 db.Members.RemoveRange(selectedMember);
                 db.SaveChanges();
             }

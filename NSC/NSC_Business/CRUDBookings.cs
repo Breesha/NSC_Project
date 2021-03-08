@@ -35,5 +35,33 @@ namespace NSC_Business
                 db.SaveChanges();
             }
         }
+
+        public void UpdateBooking(int bookingid, int roomId, int sportId, DateTime datePicked, TimeSpan timePicked)
+        {
+            using (var db = new NSCContext())
+            {
+                SelectBooking = db.Bookings.Where(c => c.BookingId == bookingid).FirstOrDefault();
+                //setSelectedRider(email);
+                SelectBooking.RoomId = roomId;
+                SelectBooking.SportId = sportId;
+                SelectBooking.DateNeeded = datePicked;
+                SelectBooking.TimeSlot = timePicked;
+
+                db.SaveChanges();
+            }
+        }
+
+        public void DeleteBooking(int bookingId)
+        {
+            using (var db = new NSCContext())
+            {
+                   var selectedBooking =
+                   from b in db.Bookings
+                   where b.BookingId == bookingId
+                   select b;
+                   db.Bookings.RemoveRange(selectedBooking);
+                   db.SaveChanges();
+            }
+        }
     }
 }
