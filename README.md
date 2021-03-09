@@ -100,3 +100,20 @@ This project is a booking system for the NSC (National Sport Centre) on the Isle
 11. To view and run tests
     1. View > Test Explorer > Run tests
     2. Tests need to have `[Test]` at the start to be acknowledged
+
+
+
+## Step 8 - WPF Layer
+
+
+
+# Sources
+
+[Reverse Engineering](https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding?tabs=vs)
+
+[Getting Started with EF Core](https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=visual-studio#create-read-update--delete)
+
+[Create Your First WPF Application](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/getting-started/walkthrough-my-first-wpf-desktop-application?view=netframeworkdesktop-4.8)
+
+
+
