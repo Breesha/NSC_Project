@@ -11,10 +11,10 @@ namespace NSC_Model
                 var newBooking1 = new Booking()
                 {
                     MemberId = 1,
-                    RoomId = 4,
+                    RoomId = 3,
                     SportId = 7,
-                    DateNeeded = Convert.ToDateTime("10/03/2021"),
-                    TimeSlot = TimeSpan.FromHours(1.00)
+                    DateNeeded = Convert.ToDateTime("15/03/2021"),
+                    TimeSlot = TimeSpan.FromHours(2.00)
                 };
                 db.Bookings.Add(newBooking1);
                 db.SaveChanges();

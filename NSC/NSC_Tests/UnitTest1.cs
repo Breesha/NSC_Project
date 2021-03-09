@@ -157,16 +157,32 @@ namespace NSC_Tests
         [Test]
         public void UPDATEBookingDetails_DatabaseIsUpdated()
         {
-            _crudBookings.UpdateBooking(8, 4, 9, Convert.ToDateTime("11/04/2021"), TimeSpan.FromHours(1.00));
+            _crudBookings.UpdateBooking(8, 4, 7, Convert.ToDateTime("11/03/2021"), TimeSpan.FromHours(1.00));
 
             using (var db = new NSCContext())
             {
                 var SelectedBooking = db.Bookings.Where(c => c.BookingId == 8).FirstOrDefault();
 
                 Assert.AreEqual(4, SelectedBooking.RoomId);
-                Assert.AreEqual(9, SelectedBooking.SportId);
-                Assert.AreEqual(Convert.ToDateTime("11/04/2021"), SelectedBooking.DateNeeded);
+                Assert.AreEqual(7, SelectedBooking.SportId);
+                Assert.AreEqual(Convert.ToDateTime("11/03/2021"), SelectedBooking.DateNeeded);
                 Assert.AreEqual(TimeSpan.FromHours(1.00), SelectedBooking.TimeSlot);
+            }
+        }
+
+        [Test]
+        public void DELETEBooking_NumberDecreasesBy1()
+        {
+            using (var db = new NSCContext())
+            {
+                //for this test, create a booking in program NSC_Model so we know the bookingid
+                //find from sql query
+
+                var numberBefore = db.Bookings.ToList().Count();
+                _crudBookings.DeleteBooking(1016);
+                var numberAfter = db.Bookings.ToList().Count();
+
+                Assert.AreEqual(numberBefore, numberAfter + 1);
             }
         }
     }
