@@ -10,14 +10,37 @@
 
     <Grid Margin="10,10,10,10">
 
+        <Grid.Background>
+            <SolidColorBrush Color="White"/>
+        </Grid.Background>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition />
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <Rectangle HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="2" >
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="1,1" MappingMode="RelativeToBoundingBox" StartPoint="0,0">
+                    <GradientStop Color="#FF3522F0" Offset="0.55"/>
+                    <GradientStop Color="White" Offset="0.8"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="NSC" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="50" Foreground="White"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Bottom" Text="TextBox" Grid.Column="1" Grid.Row="1" Width="100" Height="25"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Text="TextBox" Grid.Column="1" Grid.Row="2" Width="100" Height="25"/>
+        <Label Content="Username" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Grid.Column="0" Grid.Row="1"/>
+        <Label Content="Password" HorizontalAlignment="Right" VerticalAlignment="Top"  Grid.Column="0" Grid.Row="2"/>
+        <Button Content="Register" HorizontalAlignment="Right" VerticalAlignment="Center"  Grid.Column="0" Grid.Row="2" Width="100" Height="50"/>
+        <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="2" Width="100" Height="50"/>
+
+
 
     </Grid>
 </Page>
