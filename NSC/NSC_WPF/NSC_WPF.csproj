@@ -108,5 +108,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NSC_Business\NSC_Business.csproj">
+      <Project>{3eff7efd-0339-4383-984d-e8eeef5314af}</Project>
+      <Name>NSC_Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSC_Model\NSC_Model.csproj">
+      <Project>{e62e0e4c-0448-4b37-9a62-861e3394ad51}</Project>
+      <Name>NSC_Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

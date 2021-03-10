@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
+using NSC_Model;
+using NSC_Busniess;
 
 namespace NSC_WPF
 {
@@ -22,6 +24,8 @@ namespace NSC_WPF
     /// </summary>
     public partial class SignIn : Page
     {
+        private CRUD
+
         public SignIn()
         {
             InitializeComponent();
@@ -41,6 +45,23 @@ namespace NSC_WPF
             else
             {
                 TextMessage.Text = "No account for these details, please register or try again";
+            }
+        }
+
+        private void ButtonRegister_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NSC;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Members where Username='" + TextUsername.Text + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            if (TextUsername.Text == "" || TextPassword.Text == "")
+            {
+                TextMessage.Text = "Insert username and passowrd";
+            }
+            else if (dt.Rows.Count == 1)
+            {
+                TextMessage.Text = "Username already registered, please submit a new username";
             }
         }
     }
