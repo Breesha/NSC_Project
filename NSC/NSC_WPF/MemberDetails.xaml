@@ -31,27 +31,27 @@
         <Label Content="Member Details" Margin="20,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.Row="1" Width="230" Height="50" FontSize="30"/>
         <Label Content="Username:" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Row="1" Width="150" Height="50" FontSize="25"/>
         <Label Content="Member ID:" Margin="20,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Grid.Row="1" Width="150" Height="50" FontSize="25"/>
-        <TextBlock HorizontalAlignment="Center" Margin="25,0,0,0" Grid.Row="1" Text="" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" IsEnabled="False"/>
-        <TextBlock HorizontalAlignment="Center" Margin="25,75,0,0" Grid.Row="1" Text="" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" IsEnabled="False"/>
+        <TextBlock x:Name="TextUsername" HorizontalAlignment="Center" Margin="25,0,0,0" Grid.Row="1" Text="" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" IsEnabled="False"/>
+        <TextBlock x:Name="TextPassword" HorizontalAlignment="Center" Margin="25,75,0,0" Grid.Row="1" Text="" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" IsEnabled="False"/>
 
         <Button Content="LOG OUT" HorizontalAlignment="Right" Width="60" Height="30" Background="#FFECECEC" BorderBrush="White" Foreground="#FF161961" Margin="0,0,10,0"/>
         <Button Content="NEW BOOKING" Margin="0,0,100,0" HorizontalAlignment="Right" Width="110" Height="30" Background="#FFECECEC" BorderBrush="White" Foreground="#FF161961"/>
 
         <Label Content="Booking Details" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  Width="230" Height="40" FontSize="22" Foreground="White"/>
-        <Button Content="UPDATE" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Bottom" Width="75" Height="30" Margin="10,0,0,10"/>
-        <Button Content="DELETE" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Bottom" Width="75" Height="30" Margin="100,0,0,10"/>
+        <Button x:Name="ButtonUpdate" Content="UPDATE" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Bottom" Width="75" Height="30" Margin="10,0,0,10"/>
+        <Button x:Name="ButtonDelete" Content="DELETE" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Bottom" Width="75" Height="30" Margin="100,0,0,10"/>
         <Label Content="Booking ID:" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,160,160" Grid.Row="1" Width="150" Height="50" FontSize="25"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,0,0,160" Grid.Row="1" Text="" Width="100" Height="25" Background="#FFECECEC" IsEnabled="False"/>
+        <TextBlock x:Name="TextBookingID" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,0,0,160" Grid.Row="1" Text="" Width="100" Height="25" Background="#FFECECEC" IsEnabled="False"/>
         <Label Content="Room:" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,100,80" Grid.Row="1"/>
-        <ComboBox  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" Margin="100,0,0,80" />
+        <ComboBox x:Name="ComboRoom" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" Margin="100,0,0,80" />
         <Label Content="Sport:" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,100,0" Grid.Row="1"/>
-        <ComboBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" Margin="100,0,0,0" />
+        <ComboBox x:Name="ComboSport" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" Margin="100,0,0,0" />
         <Label Content="Date:" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="132,0,232,49" Grid.Row="1"/>
-        <DatePicker Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" Margin="100,80,0,0" />
+        <DatePicker x:Name="PickDate" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" Margin="100,80,0,0" />
         <Label Content="Time Slot:" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,160,100,0" Grid.Row="1"/>
-        <ComboBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="25" Background="#FFECECEC" Margin="80,160,0,0" />
+        <ComboBox x:Name="ComboTimeStart" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="25" Background="#FFECECEC" Margin="80,160,0,0" />
         <Label Content="-" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="280,150,100,0" Grid.Row="1"/>
-        <ComboBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="25" Background="#FFECECEC" Margin="280,160,0,0" />
+        <ComboBox x:Name="ComboTimeEnd" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="25" Background="#FFECECEC" Margin="280,160,0,0" />
 
 
 

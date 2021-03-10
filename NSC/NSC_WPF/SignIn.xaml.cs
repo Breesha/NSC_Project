@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace NSC_WPF
 {
@@ -23,6 +25,23 @@ namespace NSC_WPF
         public SignIn()
         {
             InitializeComponent();
+        }
+
+        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NSC;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Members where Username='" + TextUsername.Text + "' and Passwrd='" + TextPassword.Text + "'",con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows.Count==1)
+            {
+                //Staff_Users staffuserpage = new Staff_Users(TextLogEmail.Text);
+                //this.NavigationService.Navigate(staffuserpage);
+            }
+            else
+            {
+                TextMessage.Text = "No account for these details, please register or try again";
+            }
         }
     }
 }
