@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSC_Business", "NSC_Busines
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSC_Tests", "NSC_Tests\NSC_Tests.csproj", "{7BE6B1C4-C810-4A2C-A447-F27A1880476F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSC_WPF", "NSC_WPF\NSC_WPF.csproj", "{C588C868-AE96-4B97-9DF6-2DF7DBF8D9BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSC_WPF_Core", "NSC_WPF_Core\NSC_WPF_Core.csproj", "{40DE4D9C-B007-47CE-B165-32208745A109}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{7BE6B1C4-C810-4A2C-A447-F27A1880476F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BE6B1C4-C810-4A2C-A447-F27A1880476F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BE6B1C4-C810-4A2C-A447-F27A1880476F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C588C868-AE96-4B97-9DF6-2DF7DBF8D9BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C588C868-AE96-4B97-9DF6-2DF7DBF8D9BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C588C868-AE96-4B97-9DF6-2DF7DBF8D9BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C588C868-AE96-4B97-9DF6-2DF7DBF8D9BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40DE4D9C-B007-47CE-B165-32208745A109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40DE4D9C-B007-47CE-B165-32208745A109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40DE4D9C-B007-47CE-B165-32208745A109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40DE4D9C-B007-47CE-B165-32208745A109}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

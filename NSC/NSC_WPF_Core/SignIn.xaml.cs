@@ -14,16 +14,16 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
+using NSC_Model;
+using NSC_Business;
 
-
-namespace NSC_WPF
+namespace NSC_WPF_Core
 {
     /// <summary>
     /// Interaction logic for SignIn.xaml
     /// </summary>
     public partial class SignIn : Page
     {
-
         public SignIn()
         {
             InitializeComponent();
@@ -32,10 +32,14 @@ namespace NSC_WPF
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NSC;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from Members where Username='" + TextUsername.Text + "' and Passwrd='" + TextPassword.Text + "'",con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Members where Username='" + TextUsername.Text + "' and Passwrd='" + TextPassword.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            if (dt.Rows.Count==1)
+            if (TextUsername.Text == "" || TextPassword.Text == "")
+            {
+                TextMessage.Text = "Insert username and passowrd";
+            }
+            else if (dt.Rows.Count == 1)
             {
                 //Staff_Users staffuserpage = new Staff_Users(TextLogEmail.Text);
                 //this.NavigationService.Navigate(staffuserpage);
@@ -61,6 +65,11 @@ namespace NSC_WPF
             {
                 TextMessage.Text = "Username already registered, please submit a new username";
             }
+            else
+            {
+                TextMessage.Text = "Hold on";
+            }
         }
     }
 }
+    
