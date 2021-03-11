@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NSC_WPF_Core"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="NSC - Sign In">
 
     <Grid Margin="10,10,10,10">
@@ -39,9 +39,7 @@
         <Label Content="Password" HorizontalAlignment="Right" VerticalAlignment="Top"  Grid.Column="0" Grid.Row="2"/>
         <Button x:Name="ButtonRegister" Content="Register" HorizontalAlignment="Right" VerticalAlignment="Center"  Grid.Column="0" Grid.Row="2" Width="100" Height="50" Margin="0,0,10,0" Click="ButtonRegister_Click"/>
         <Button x:Name="ButtonLogin" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="2" Width="100" Height="50" Margin="10,0,0,0" Click="ButtonLogin_Click"/>
-        <TextBlock x:Name="TextMessage" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2" Text="" VerticalAlignment="Bottom" Width="300" Height="30" Margin="0,0,0,10" Foreground="#FFAA2020" TextWrapping="Wrap" />
-
-
+        <TextBlock x:Name="TextMessage" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2" Text="" VerticalAlignment="Bottom" Width="300" Height="30" Margin="0,0,0,10" Foreground="#FFAA2020" TextWrapping="Wrap" TextAlignment="Center"/>
 
     </Grid>
 </Page>

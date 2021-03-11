@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NSC_WPF_Core"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="NSC - Member Details">
 
     <Grid>
@@ -27,12 +27,13 @@
         <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Height="40" Padding="5" Background="#FF161961">
             <Label VerticalAlignment="Center" Foreground="White"></Label>
         </Border>
-        <ListBox Grid.Row="2" Background="#FFECECEC" />
+        <ListBox x:Name="ListBookings" Grid.Row="2" Background="#FFECECEC" SelectionChanged="ListBookings_SelectionChanged" />
         <Label Content="Member Details" Margin="20,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.Row="1" Width="230" Height="50" FontSize="30"/>
         <Label Content="Username:" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Row="1" Width="150" Height="50" FontSize="25"/>
-        <Label Content="Member ID:" Margin="20,0,0,40" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Grid.Row="1" Width="150" Height="50" FontSize="25"/>
+        <Label Content="Member ID:" Margin="20,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Row="1" Width="150" Height="50" FontSize="25"/>
         <TextBlock x:Name="TextUsername" HorizontalAlignment="Center" Margin="25,0,0,0" Grid.Row="1" Text="" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" IsEnabled="False"/>
-        <TextBlock x:Name="TextPassword" HorizontalAlignment="Center" Margin="25,75,0,0" Grid.Row="1" Text="" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" IsEnabled="False"/>
+        <TextBlock x:Name="TextID" HorizontalAlignment="Center" Margin="25,150,0,0" Grid.Row="1" Text="" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="1" Text="Your Bookings" VerticalAlignment="Bottom" Width="400" Height="40" Background="#FF161961" IsEnabled="False" Foreground="White" FontSize="22" TextAlignment="Center"/>
 
         <Button Content="LOG OUT" HorizontalAlignment="Right" Width="60" Height="30" Background="#FFECECEC" BorderBrush="White" Foreground="#FF161961" Margin="0,0,10,0"/>
         <Button Content="NEW BOOKING" Margin="0,0,100,0" HorizontalAlignment="Right" Width="110" Height="30" Background="#FFECECEC" BorderBrush="White" Foreground="#FF161961"/>

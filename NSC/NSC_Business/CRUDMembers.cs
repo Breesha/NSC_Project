@@ -18,11 +18,22 @@ namespace NSC_Business
 
         public Member SelectMember { get; set; }
 
-        public List<Member> AllMember()
+        public void ChooseMember(string username)
         {
             using (var db = new NSCContext())
             {
-                return db.Members.ToList();
+                SelectMember = db.Members.Where(e => e.Username.Trim() == username.Trim()).FirstOrDefault();
+            }
+        }
+
+        public List<Booking> MemberBookings(string username)
+        {
+            using (var db = new NSCContext())
+            {
+                return (from b in db.Bookings
+                        join m in db.Members on b.MemberId equals m.MemberId
+                        where m.Username == username
+                        select b).ToList();
             }
         }
 

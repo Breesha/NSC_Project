@@ -24,6 +24,8 @@ namespace NSC_WPF_Core
     /// </summary>
     public partial class SignIn : Page
     {
+        private CRUDMembers _crudMembers = new CRUDMembers();
+
         public SignIn()
         {
             InitializeComponent();
@@ -41,8 +43,8 @@ namespace NSC_WPF_Core
             }
             else if (dt.Rows.Count == 1)
             {
-                //Staff_Users staffuserpage = new Staff_Users(TextLogEmail.Text);
-                //this.NavigationService.Navigate(staffuserpage);
+                MemberDetails memberPage = new MemberDetails(TextUsername.Text);
+                this.NavigationService.Navigate(memberPage);
             }
             else
             {
@@ -67,7 +69,9 @@ namespace NSC_WPF_Core
             }
             else
             {
-                TextMessage.Text = "Hold on";
+                //_crudMembers.CreateMember(TextUsername.Text, TextPassword.Text);
+                MemberDetails memberPage = new MemberDetails(TextUsername.Text);
+                this.NavigationService.Navigate(memberPage);
             }
         }
     }
