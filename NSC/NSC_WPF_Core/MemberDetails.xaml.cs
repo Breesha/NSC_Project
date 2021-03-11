@@ -28,6 +28,8 @@ namespace NSC_WPF_Core
         public MemberDetails()
         {
             InitializeComponent();
+            ComboRoom.ItemsSource = _crudBookings.AllRooms();
+            ComboSport.ItemsSource = _crudBookings.AllSports();
         }
 
         public MemberDetails(string username) : this()
@@ -51,7 +53,18 @@ namespace NSC_WPF_Core
 
         private void ListBookings_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (ListBookings.SelectedItem != null)
+            {
+                _crudBookings.ChosenBooking(ListBookings.SelectedItem);
+                TextBookingID.Text = _crudBookings.SelectBooking.BookingId.ToString();
+                ComboRoom.SelectedItem = _crudBookings.SelectBooking.Room;
+                ComboSport.Equals(_crudBookings.SelectBooking.Sport);
+            }
+        }
 
+        private void ComboRoom_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }

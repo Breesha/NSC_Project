@@ -10,11 +10,24 @@ namespace NSC_Business
     {
         public Booking SelectBooking { get; set; }
 
-        public List<Booking> AllBooking()
+        public void ChosenBooking(object selectedBooking)
+        {
+            SelectBooking = (Booking)selectedBooking;
+        }
+
+        public List<Room> AllRooms()
         {
             using (var db = new NSCContext())
             {
-                return db.Bookings.ToList();
+                return db.Rooms.ToList();
+            }
+        }
+
+        public List<Sport> AllSports()
+        {
+            using (var db = new NSCContext())
+            {
+                return db.Sports.ToList();
             }
         }
 
