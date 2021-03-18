@@ -69,7 +69,7 @@ namespace NSC_WPF_Core
             }
             else
             {
-                //_crudMembers.CreateMember(TextUsername.Text, TextPassword.Text);
+                _crudMembers.CreateMember(TextUsername.Text, TextPassword.Text);
                 MemberDetails memberPage = new MemberDetails(TextUsername.Text);
                 this.NavigationService.Navigate(memberPage);
             }
