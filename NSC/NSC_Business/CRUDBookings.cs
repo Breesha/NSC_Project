@@ -15,11 +15,49 @@ namespace NSC_Business
             SelectBooking = (Booking)selectedBooking;
         }
 
-        public List<Room> AllRooms()
+
+        public List<int> AllRooms_ID()
+        {
+            List<int> roomid = new List<int> { 1, 2, 3, 4, 5, 6 };
+            return roomid;
+
+            //using (var db = new NSCContext())
+            //{
+            //    return db.Rooms.ToList();
+            //}
+        }
+
+
+        public List<int> AllSports_ID()
+        {
+            List<int> sportid = new List<int> { 1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13 };
+            return sportid;
+        }
+
+        public Sport SpecSport_ID(int? id)
         {
             using (var db = new NSCContext())
             {
-                return db.Rooms.ToList();
+                Sport
+                                        //sport = "1 - Platform Diving";
+                                        sport = id switch
+                                        {
+                                            1 => db.Sports.Where(e => e.SportId == 1).FirstOrDefault(),//sport = "1 - Platform Diving";
+                                            2 => db.Sports.Where(e => e.SportId == 2).FirstOrDefault(),
+                                            3 => db.Sports.Where(e => e.SportId == 3).FirstOrDefault(),
+                                            4 => db.Sports.Where(e => e.SportId == 4).FirstOrDefault(),
+                                            5 => db.Sports.Where(e => e.SportId == 5).FirstOrDefault(),
+                                            6 => db.Sports.Where(e => e.SportId == 6).FirstOrDefault(),
+                                            7 => db.Sports.Where(e => e.SportId == 7).FirstOrDefault(),
+                                            8 => db.Sports.Where(e => e.SportId == 8).FirstOrDefault(),
+                                            9 => db.Sports.Where(e => e.SportId == 9).FirstOrDefault(),
+                                            10 => db.Sports.Where(e => e.SportId == 10).FirstOrDefault(),
+                                            11 => db.Sports.Where(e => e.SportId == 11).FirstOrDefault(),
+                                            12 => db.Sports.Where(e => e.SportId == 12).FirstOrDefault(),
+                                            13 => db.Sports.Where(e => e.SportId == 13).FirstOrDefault(),
+                                            _ => db.Sports.Where(e => e.SportId == 1).FirstOrDefault(),
+                                        };
+                return sport;
             }
         }
 

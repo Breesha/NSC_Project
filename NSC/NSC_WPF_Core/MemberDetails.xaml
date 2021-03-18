@@ -36,10 +36,10 @@
         <TextBlock HorizontalAlignment="Center" Grid.Row="1" Text="Your Bookings" VerticalAlignment="Bottom" Width="400" Height="40" Background="#FF161961" IsEnabled="False" Foreground="White" FontSize="22" TextAlignment="Center"/>
 
         <Button Content="LOG OUT" HorizontalAlignment="Right" Width="60" Height="30" Background="#FFECECEC" BorderBrush="White" Foreground="#FF161961" Margin="0,0,10,0"/>
-        <Button Content="NEW BOOKING" Margin="0,0,100,0" HorizontalAlignment="Right" Width="110" Height="30" Background="#FFECECEC" BorderBrush="White" Foreground="#FF161961"/>
 
         <Label Content="Booking Details" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  Width="230" Height="40" FontSize="22" Foreground="White"/>
-        <Button x:Name="ButtonUpdate" Content="UPDATE" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Bottom" Width="75" Height="30" Margin="10,0,0,10"/>
+        <Button x:Name="ButtonNewBooking" Content="NEW BOOKING" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Width="110" Height="30" Margin="10,130,0,0" Click="ButtonNewBooking_Click" />
+        <Button x:Name="ButtonUpdate" Content="UPDATE" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Bottom" Width="75" Height="30" Margin="10,0,0,10" Click="ButtonUpdate_Click"/>
         <Button x:Name="ButtonDelete" Content="DELETE" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Bottom" Width="75" Height="30" Margin="100,0,0,10"/>
         <Label Content="Booking ID:" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,160,160" Grid.Row="1" Width="150" Height="50" FontSize="25"/>
         <TextBlock x:Name="TextBookingID" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,0,0,160" Grid.Row="1" Text="" Width="100" Height="25" Background="#FFECECEC" IsEnabled="False"/>
@@ -50,9 +50,7 @@
         <Label Content="Date:" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,80,100,0" Grid.Row="1"/>
         <DatePicker x:Name="PickDate" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25" Background="#FFECECEC" Margin="100,80,0,0" />
         <Label Content="Time Slot:" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,160,100,0" Grid.Row="1"/>
-        <ComboBox x:Name="ComboTimeStart" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="25" Background="#FFECECEC" Margin="80,160,0,0" />
-        <Label Content="-" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="280,150,100,0" Grid.Row="1"/>
-        <ComboBox x:Name="ComboTimeEnd" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="25" Background="#FFECECEC" Margin="280,160,0,0" />
+        <ComboBox x:Name="ComboTime" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="25" Background="#FFECECEC" Margin="80,160,0,0" />
 
 
 

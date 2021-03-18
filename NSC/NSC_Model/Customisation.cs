@@ -8,7 +8,7 @@ namespace NSC_Model
     {
         public override string ToString()
         {
-            return $"Booking {BookingId} - Date {DateNeeded.Day}/{DateNeeded.Month}/{DateNeeded.Year}";
+            return $"Booking {BookingId} - Booked for {DateNeeded.Day}/{DateNeeded.Month}/{DateNeeded.Year}";
         }
     }
 
@@ -16,6 +16,7 @@ namespace NSC_Model
     {
         public override string ToString()
         {
+
             return $"{RoomId} - {RoomName}";
         }
     }
