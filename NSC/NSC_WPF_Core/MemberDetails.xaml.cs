@@ -29,7 +29,8 @@ namespace NSC_WPF_Core
         {
             InitializeComponent();
             ComboRoom.ItemsSource = _crudBookings.AllRooms_ID();
-            ComboSport.ItemsSource = _crudBookings.AllSports();
+            ComboSport.ItemsSource = _crudBookings.AllSports_ID();
+            ComboTime.ItemsSource = _crudBookings.AllTime();
         }
 
         public MemberDetails(string username) : this()
@@ -58,8 +59,9 @@ namespace NSC_WPF_Core
                 _crudBookings.ChosenBooking(ListBookings.SelectedItem);
                 TextBookingID.Text = _crudBookings.SelectBooking.BookingId.ToString();
                 ComboRoom.SelectedItem = _crudBookings.SelectBooking.RoomId;
-                Sport help = _crudBookings.SpecSport_ID(_crudBookings.SelectBooking.SportId);
-                ComboSport.SelectedItem = help;
+                ComboSport.SelectedItem = _crudBookings.SelectBooking.SportId;
+                PickDate.SelectedDate = _crudBookings.SelectBooking.DateNeeded;
+                ComboTime.SelectedItem = _crudBookings.SelectBooking.TimeSlot;
             }
         }
 
@@ -75,7 +77,7 @@ namespace NSC_WPF_Core
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            _crudBookings.UpdateBooking(Convert.ToInt32(TextBookingID.Text), ComboRoom.SelectedItem,ComboSport.SelectedItem, PickDate.SelectedDate.GetValueOrDefault(), ComboTime.SelectedItem.ToString())
+            //_crudBookings.UpdateBooking(Convert.ToInt32(TextBookingID.Text), ComboRoom.SelectedItem,ComboSport.SelectedItem, PickDate.SelectedDate.GetValueOrDefault(), ComboTime.SelectedItem.ToString())
         }
     }
 }

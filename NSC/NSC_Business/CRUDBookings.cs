@@ -34,6 +34,12 @@ namespace NSC_Business
             return sportid;
         }
 
+        public List<TimeSpan> AllTime()
+        {
+            List<TimeSpan> timeduration = new List<TimeSpan> { TimeSpan.FromHours(1.00), TimeSpan.FromHours(1.50), TimeSpan.FromHours(2.00), TimeSpan.FromHours(2.50), TimeSpan.FromHours(3.00), TimeSpan.FromHours(3.50), TimeSpan.FromHours(4.00), TimeSpan.FromHours(4.50), TimeSpan.FromHours(5.00), TimeSpan.FromHours(5.50), TimeSpan.FromHours(6.00) };
+            return timeduration;
+        }
+
         public Sport SpecSport_ID(int? id)
         {
             using (var db = new NSCContext())
