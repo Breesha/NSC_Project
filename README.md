@@ -105,7 +105,9 @@ This project is a booking system for the NSC (National Sport Centre) on the Isle
 
 ## Step 8 - WPF Layer
 
+Follow the guide for [Create Your First WPF Application](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/getting-started/walkthrough-my-first-wpf-desktop-application?view=netframeworkdesktop-4.8) but instead of a .NET Framework USE .NET CORE. This allows for you to add dependencies to the model and business pages.
 
+This walkthrough allows for the website to have pages to flick through and allocate a starting page (Sign in page).
 
 # Sources
 
@@ -115,5 +117,7 @@ This project is a booking system for the NSC (National Sport Centre) on the Isle
 
 [Create Your First WPF Application](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/getting-started/walkthrough-my-first-wpf-desktop-application?view=netframeworkdesktop-4.8)
 
+[TimeSpan.FromHours Method](https://docs.microsoft.com/en-us/dotnet/api/system.timespan.fromhours?view=net-5.0)
 
+[The ComboBox control](https://www.wpf-tutorial.com/list-controls/combobox-control/) - Very helpful website for other problems too
 
